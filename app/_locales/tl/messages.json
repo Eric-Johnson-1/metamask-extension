@@ -6449,9 +6449,6 @@
   "settingsSearchMatchingNotFound": {
     "message": "Walang nakitang katugmang resulta."
   },
-  "settingsSubHeadingSignaturesAndTransactions": {
-    "message": "Lagda at hiling sa transaksyon"
-  },
   "shieldClaim": {
     "message": "Magsumite ng claim"
   },

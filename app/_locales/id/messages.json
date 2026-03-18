@@ -6449,9 +6449,6 @@
   "settingsSearchMatchingNotFound": {
     "message": "Tidak menemukan hasil yang cocok."
   },
-  "settingsSubHeadingSignaturesAndTransactions": {
-    "message": "Permintaan tanda tangan dan transaksi"
-  },
   "shieldClaim": {
     "message": "Ajukan klaim"
   },
