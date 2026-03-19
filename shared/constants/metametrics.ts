@@ -819,6 +819,7 @@ export enum MetaMetricsEventName {
   MetricsOptOut = 'Metrics Opt Out',
   MetricsDataDeletionRequest = 'Delete MetaMetrics Data Request Submitted',
   MusdClaimBonusButtonClicked = 'MUSD Claim Bonus Button Clicked',
+  MusdClaimBonusStatusUpdated = 'MUSD Claim Bonus Status Updated',
   MusdConversionCompleted = 'MUSD Conversion Completed',
   MusdConversionCtaClicked = 'MUSD Conversion CTA Clicked',
   MusdConversionFailed = 'MUSD Conversion Failed',
@@ -828,6 +829,7 @@ export enum MetaMetricsEventName {
   MusdConversionStarted = 'MUSD Conversion Started',
   MusdConversionStatusUpdated = 'MUSD Conversion Status Updated',
   MusdFullscreenAnnouncementButtonClicked = 'MUSD Fullscreen Announcement Button Clicked',
+  MusdBonusTermsOfUsePressed = 'MUSD Bonus Terms of Use Pressed',
   MusdFullscreenAnnouncementDisplayed = 'MUSD Fullscreen Announcement Displayed',
   NavAccountMenuOpened = 'Account Menu Opened',
   NavConnectedSitesOpened = 'Connected Sites Opened',
@@ -925,6 +927,7 @@ export enum MetaMetricsEventName {
   SupportLinkClicked = 'Support Link Clicked',
   TermsOfUseShown = 'Terms of Use Shown',
   TermsOfUseAccepted = 'Terms of Use Accepted',
+  ThemeChanged = 'Theme Changed',
   TokenImportButtonClicked = 'Import Token Button Clicked',
   TokenScreenOpened = 'Token Screen Opened',
   TokenAdded = 'Token Added',
@@ -1084,6 +1087,16 @@ export enum MetaMetricsEventName {
   ShieldEligibilityCohortTimeout = 'Shield Eligibility Cohort Timeout',
   ShieldSubscriptionUnexpectedErrorEvent = 'Shield Subscription Unexpected Error',
   ShieldOptInRewards = 'Shield Opt In Rewards',
+  // Contacts (address book)
+  ContactsPageViewed = 'Contacts Page Viewed',
+  ContactDetailsViewed = 'Contact Details Viewed',
+  AddContactClicked = 'Add Contact Clicked',
+  ContactAddQrScannerClicked = 'Contact Add QR Scanner Clicked',
+  ContactAdded = 'Contact Added',
+  EditContactClicked = 'Edit Contact Clicked',
+  ContactUpdated = 'Contact Updated',
+  DeleteContactClicked = 'Delete Contact Clicked',
+  ContactDeleted = 'Contact Deleted',
 }
 
 export enum MetaMetricsEventAccountType {
@@ -1146,6 +1159,7 @@ export enum MetaMetricsEventCategory {
   Transactions = 'Transactions',
   Wallet = 'Wallet',
   Confirmations = 'Confirmations',
+  Contacts = 'Contacts',
   CrossChainSwaps = 'Cross Chain Swaps',
   PortStream = 'Port Stream',
   Rewards = 'Rewards',

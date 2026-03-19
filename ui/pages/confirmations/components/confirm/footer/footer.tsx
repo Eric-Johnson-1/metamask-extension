@@ -27,7 +27,10 @@ import { DEFAULT_ROUTE } from '../../../../../helpers/constants/routes';
 import useAlerts from '../../../../../hooks/useAlerts';
 import { useI18nContext } from '../../../../../hooks/useI18nContext';
 import { doesAddressRequireLedgerHidConnection } from '../../../../../selectors';
-import { useConfirmationNavigation } from '../../../hooks/useConfirmationNavigation';
+import {
+  useConfirmationNavigation,
+  useConfirmationNavigationOptions,
+} from '../../../hooks/useConfirmationNavigation';
 import { resolvePendingApproval } from '../../../../../store/actions';
 import { useConfirmContext } from '../../../context/confirm';
 import { useIsGaslessLoading } from '../../../hooks/gas/useIsGaslessLoading';
@@ -46,6 +49,9 @@ import { useUserSubscriptions } from '../../../../../hooks/subscription/useSubsc
 import OriginThrottleModal from './origin-throttle-modal';
 import ShieldFooterAgreement from './shield-footer-agreement';
 import ShieldFooterCoverageIndicator from './shield-footer-coverage-indicator/shield-footer-coverage-indicator';
+import { SingleActionFooter } from './single-action-footer';
+
+const SINGLE_ACTION_FOOTER_TYPES = [TransactionType.musdConversion];
 
 export type OnCancelHandler = ({
   location,
@@ -219,6 +225,7 @@ const Footer = () => {
   const { shouldThrottleOrigin } = useOriginThrottling();
   const [showOriginThrottleModal, setShowOriginThrottleModal] = useState(false);
   const { onCancel, resetTransactionState } = useConfirmActions();
+  const { returnTo } = useConfirmationNavigationOptions();
 
   const hardwareWalletRequiresConnection = useSelector((state) => {
     if (from) {
@@ -279,9 +286,16 @@ const Footer = () => {
       return;
     }
 
-    await onCancel({ location: MetaMetricsEventLocation.Confirmation });
+    await onCancel({
+      location: MetaMetricsEventLocation.Confirmation,
+      navigateBackToPreviousPage: Boolean(returnTo),
+    });
 
     onDappSwapCompleted();
+    if (returnTo) {
+      return;
+    }
+
     if (isAddEthereumChain) {
       navigate(DEFAULT_ROUTE);
     } else {
@@ -290,6 +304,7 @@ const Footer = () => {
   }, [
     navigateNext,
     onCancel,
+    returnTo,
     shouldThrottleOrigin,
     currentConfirmation,
     isAddEthereumChain,
@@ -301,6 +316,18 @@ const Footer = () => {
 
   if (!currentConfirmation) {
     return null;
+  }
+
+  if (
+    currentConfirmation.type &&
+    SINGLE_ACTION_FOOTER_TYPES.includes(currentConfirmation.type)
+  ) {
+    return (
+      <SingleActionFooter
+        onSubmit={onSubmit}
+        isGaslessLoading={isGaslessLoading}
+      />
+    );
   }
 
   return (
