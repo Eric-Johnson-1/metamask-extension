@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { type TransactionMeta } from '@metamask/transaction-controller';
+
 import {
   PREPARE_SWAP_ROUTE,
   CROSS_CHAIN_SWAP_ROUTE,
@@ -15,7 +16,7 @@ import {
   TRANSACTION_SHIELD_ROUTE,
 } from '../../helpers/constants/routes';
 import { getConfirmationRoute } from '../confirmations/hooks/useConfirmationNavigation';
-// eslint-disable-next-line import/no-restricted-paths
+// eslint-disable-next-line import-x/no-restricted-paths
 import { getEnvironmentType } from '../../../app/scripts/lib/util';
 import {
   ENVIRONMENT_TYPE_FULLSCREEN,
@@ -71,6 +72,7 @@ export const ConfirmationHandler = () => {
 
   const canRedirect = !isNotification && !stayOnHomePage;
   const transactions = useSelector(getTransactions) as TransactionMeta[];
+
   const merklClaims = useMemo(
     () => transactions.filter(isMerklClaimTransaction),
     [transactions],
