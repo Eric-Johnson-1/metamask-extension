@@ -3742,9 +3742,6 @@
   "links": {
     "message": "Bağlantılar"
   },
-  "loadMore": {
-    "message": "Daha fazlasını yükle"
-  },
   "loading": {
     "message": "Yükleniyor..."
   },
