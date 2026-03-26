@@ -339,6 +339,9 @@
   "addWallet": {
     "message": "Agregar billetera"
   },
+  "addedProtectionOptionalBadge": {
+    "message": "Opcional"
+  },
   "additionalNetworks": {
     "message": "Redes adicionales"
   },
@@ -407,9 +410,6 @@
   "advancedGasFeeDefaultOptIn": {
     "message": "Guarde estos valores como mis valores por defecto para la red de $1.",
     "description": "$1 is the current network name."
-  },
-  "advancedGasFeeModalTitle": {
-    "message": "Tarifa de gas avanzada"
   },
   "advancedGasPriceModalTitle": {
     "message": "Tarifa de red avanzada"
@@ -1348,14 +1348,6 @@
   "cancelPopoverTitle": {
     "message": "Cancelar transacción"
   },
-  "cancelSpeedUpLabel": {
-    "message": "Esta tarifa de gas va a $1 el original.",
-    "description": "$1 is text 'replace' in bold"
-  },
-  "cancelSpeedUpTransactionTooltip": {
-    "message": "Para $1 una transacción, la tarifa de gas debe aumentar al menos un 10 % para que sea reconocida por la red.",
-    "description": "$1 is string 'cancel' or 'speed up'"
-  },
   "cancelTransactionDescription": {
     "message": "Esta transacción se cancelará y esta tarifa de red sustituirá a la original."
   },
@@ -2069,10 +2061,6 @@
   "dappSuggestedShortLabel": {
     "message": "Sitio"
   },
-  "dappSuggestedTooltip": {
-    "message": "$1 ha recomendado este precio.",
-    "description": "$1 represents the Dapp's origin"
-  },
   "dappSwapAdvantage": {
     "message": "Ahorra y gana con MetaMask Swaps"
   },
@@ -2523,9 +2511,6 @@
   "editAddressNickname": {
     "message": "Editar apodo de dirección"
   },
-  "editCancellationGasFeeModalTitle": {
-    "message": "Editar tarifa de cancelación de gas"
-  },
   "editContact": {
     "message": "Editar contacto"
   },
@@ -2584,9 +2569,6 @@
   "editGasPriceTooltip": {
     "message": "Esta red requiere un campo \"Precio del gas\" cuando se envía una transacción. El precio del gas es la cantidad que se pagará por unidad de gas."
   },
-  "editGasSubTextFeeLabel": {
-    "message": "Tarifa máxima:"
-  },
   "editGasTitle": {
     "message": "Editar prioridad"
   },
@@ -2613,9 +2595,6 @@
   },
   "editPermissions": {
     "message": "Editar permisos"
-  },
-  "editSpeedUpEditGasFeeModalTitle": {
-    "message": "Editar la tarifa de aceleración de gas"
   },
   "editSpendingCap": {
     "message": "Editar límite de gasto"
@@ -2892,9 +2871,6 @@
   "fast": {
     "message": "Rápido"
   },
-  "feeDetails": {
-    "message": "Detalles de la tarifa"
-  },
   "fieldRequired": {
     "message": "Se requiere $1"
   },
@@ -3026,9 +3002,6 @@
   },
   "gasLimitV2": {
     "message": "Límite de gas"
-  },
-  "gasOption": {
-    "message": "Opción de gas"
   },
   "gasPrice": {
     "message": "Precio del gas"
@@ -3675,18 +3648,6 @@
   "knownTokenWarning": {
     "message": "Esta acción editará tokens que ya estén enumerados en su monedero y que se pueden usar para engañarlo. Apruebe solo si está seguro de que quiere cambiar lo que representan estos tokens. Más información sobre $1"
   },
-  "l1Fee": {
-    "message": "Tarifa L1"
-  },
-  "l1FeeTooltip": {
-    "message": "Tarifa de gas L1"
-  },
-  "l2Fee": {
-    "message": "Tarifa L2"
-  },
-  "l2FeeTooltip": {
-    "message": "Tarifa de gas L2"
-  },
   "language": {
     "message": "Idioma"
   },
@@ -3699,12 +3660,6 @@
   },
   "lavaDomeCopyWarning": {
     "message": "Por su seguridad, seleccionar este texto no está disponible en este momento."
-  },
-  "layer1Fees": {
-    "message": "Cargos de capa 1"
-  },
-  "layer2Fees": {
-    "message": "Tarifas de la capa 2"
   },
   "learnHow": {
     "message": "Más información"
@@ -3837,9 +3792,6 @@
   },
   "links": {
     "message": "Enlaces"
-  },
-  "loadMore": {
-    "message": "Cargar más"
   },
   "loading": {
     "message": "Cargando..."
@@ -3982,9 +3934,6 @@
   },
   "maxFeeTooltip": {
     "message": "Una tarifa máxima proporcionada para pagar la transacción."
-  },
-  "maxPriorityFee": {
-    "message": "Tarifa de prioridad máxima"
   },
   "medium": {
     "message": "Mercado"
@@ -4411,9 +4360,6 @@
   },
   "networkFeeExplanationTitle": {
     "message": "Tarifa de red"
-  },
-  "networkIsBusy": {
-    "message": "La red está ocupada. Los precios del gas son altos y las estimaciones son menos precisas."
   },
   "networkMenu": {
     "message": "Menú de red"
@@ -5693,9 +5639,6 @@
   },
   "perpsPosition": {
     "message": "Posición"
-  },
-  "perpsPositionClosedReverseOrderFailed": {
-    "message": "Tu posición se cerró, pero la orden inversa falló. Es posible que debas abrir manualmente una nueva posición"
   },
   "perpsPositionSize": {
     "message": "Tamaño de la posición"
@@ -8851,9 +8794,6 @@
   },
   "transactionDetailGasHeading": {
     "message": "Tarifa estimada de gas"
-  },
-  "transactionDetailMultiLayerTotalSubtitle": {
-    "message": "Monto + cargos"
   },
   "transactionError": {
     "message": "Error de transacción. Excepción generada en el código de contrato."

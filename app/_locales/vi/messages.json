@@ -339,6 +339,9 @@
   "addWallet": {
     "message": "Thêm ví"
   },
+  "addedProtectionOptionalBadge": {
+    "message": "Không bắt buộc"
+  },
   "additionalNetworks": {
     "message": "Mạng bổ sung"
   },
@@ -407,9 +410,6 @@
   "advancedGasFeeDefaultOptIn": {
     "message": "Lưu các giá trị này làm giá trị mặc định cho mạng $1.",
     "description": "$1 is the current network name."
-  },
-  "advancedGasFeeModalTitle": {
-    "message": "Phí gas nâng cao"
   },
   "advancedGasPriceModalTitle": {
     "message": "Phí mạng nâng cao"
@@ -1348,14 +1348,6 @@
   "cancelPopoverTitle": {
     "message": "Hủy giao dịch"
   },
-  "cancelSpeedUpLabel": {
-    "message": "Phí gas này sẽ $1 phí gas ban đầu.",
-    "description": "$1 is text 'replace' in bold"
-  },
-  "cancelSpeedUpTransactionTooltip": {
-    "message": "Để $1 giao dịch, phí gas phải tăng thêm ít nhất 10% để được mạng lưới ghi nhận.",
-    "description": "$1 is string 'cancel' or 'speed up'"
-  },
   "cancelTransactionDescription": {
     "message": "Giao dịch này sẽ bị hủy và phí mạng này sẽ thay thế phí ban đầu."
   },
@@ -2069,10 +2061,6 @@
   "dappSuggestedShortLabel": {
     "message": "Trang web"
   },
-  "dappSuggestedTooltip": {
-    "message": "$1 đã đề xuất mức giá này.",
-    "description": "$1 represents the Dapp's origin"
-  },
   "dappSwapAdvantage": {
     "message": "Tiết kiệm và kiếm tiền với MetaMask Hoán đổi"
   },
@@ -2523,9 +2511,6 @@
   "editAddressNickname": {
     "message": "Chỉnh sửa biệt danh địa chỉ"
   },
-  "editCancellationGasFeeModalTitle": {
-    "message": "Chỉnh sửa phí gas hủy"
-  },
   "editContact": {
     "message": "Sửa người liên hệ"
   },
@@ -2584,9 +2569,6 @@
   "editGasPriceTooltip": {
     "message": "Mạng này yêu cầu trường \"Giá gas\" khi gửi giao dịch. Giá gas là số tiền bạn sẽ trả cho mỗi đơn vị gas."
   },
-  "editGasSubTextFeeLabel": {
-    "message": "Phí tối đa:"
-  },
   "editGasTitle": {
     "message": "Chỉnh sửa mức ưu tiên"
   },
@@ -2613,9 +2595,6 @@
   },
   "editPermissions": {
     "message": "Chỉnh sửa quyền"
-  },
-  "editSpeedUpEditGasFeeModalTitle": {
-    "message": "Chỉnh sửa phí gas tăng tốc"
   },
   "editSpendingCap": {
     "message": "Chỉnh sửa hạn mức chi tiêu"
@@ -2892,9 +2871,6 @@
   "fast": {
     "message": "Nhanh"
   },
-  "feeDetails": {
-    "message": "Chi tiết phí"
-  },
   "fieldRequired": {
     "message": "$1 là bắt buộc"
   },
@@ -3026,9 +3002,6 @@
   },
   "gasLimitV2": {
     "message": "Hạn mức phí gas"
-  },
-  "gasOption": {
-    "message": "Tùy chọn phí gas"
   },
   "gasPrice": {
     "message": "Giá gas"
@@ -3675,18 +3648,6 @@
   "knownTokenWarning": {
     "message": "Hành động này sẽ chỉnh sửa các token đã niêm yết trong ví của bạn, kẻ xấu có thể lợi dụng việc này để lừa đảo bạn. Chỉ chấp thuận nếu bạn chắc chắn rằng bạn muốn thay đổi giá trị mà những token này đại diện cho. Tìm hiểu thêm về $1"
   },
-  "l1Fee": {
-    "message": "Phí L1"
-  },
-  "l1FeeTooltip": {
-    "message": "Phí gas L1"
-  },
-  "l2Fee": {
-    "message": "Phí L2"
-  },
-  "l2FeeTooltip": {
-    "message": "Phí gas L2"
-  },
   "language": {
     "message": "Ngôn ngữ"
   },
@@ -3699,12 +3660,6 @@
   },
   "lavaDomeCopyWarning": {
     "message": "Vì sự an toàn của bạn, việc chọn văn bản này hiện không khả dụng."
-  },
-  "layer1Fees": {
-    "message": "Phí Lớp 1"
-  },
-  "layer2Fees": {
-    "message": "Phí Lớp 2"
   },
   "learnHow": {
     "message": "Tìm hiểu cách thức"
@@ -3837,9 +3792,6 @@
   },
   "links": {
     "message": "Liên kết"
-  },
-  "loadMore": {
-    "message": "Tải thêm"
   },
   "loading": {
     "message": "Đang tải..."
@@ -3982,9 +3934,6 @@
   },
   "maxFeeTooltip": {
     "message": "Một khoản phí tối đa được cung cấp để thanh toán cho giao dịch."
-  },
-  "maxPriorityFee": {
-    "message": "Phí ưu tiên tối đa"
   },
   "medium": {
     "message": "Thị trường"
@@ -4411,9 +4360,6 @@
   },
   "networkFeeExplanationTitle": {
     "message": "Phí mạng"
-  },
-  "networkIsBusy": {
-    "message": "Mạng đang bận. Phí gas cao và ước tính kém chính xác hơn."
   },
   "networkMenu": {
     "message": "Trình đơn mạng"
@@ -5693,9 +5639,6 @@
   },
   "perpsPosition": {
     "message": "Vị thế"
-  },
-  "perpsPositionClosedReverseOrderFailed": {
-    "message": "Vị thế của bạn đã được đóng nhưng lệnh đảo chiều thất bại. Bạn có thể cần mở một vị thế mới theo cách thủ công"
   },
   "perpsPositionSize": {
     "message": "Kích thước vị thế"
@@ -8851,9 +8794,6 @@
   },
   "transactionDetailGasHeading": {
     "message": "Phí gas ước tính"
-  },
-  "transactionDetailMultiLayerTotalSubtitle": {
-    "message": "Số lượng + phí"
   },
   "transactionError": {
     "message": "Lỗi giao dịch. Đã xảy ra ngoại lệ trong mã hợp đồng."
