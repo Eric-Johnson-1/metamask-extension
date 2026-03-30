@@ -276,7 +276,6 @@
   "shared/lib/mv3.utils.js",
   "shared/lib/object.utils.js",
   "shared/lib/provider-injection.js",
-  "shared/lib/random-id.js",
   "shared/lib/sentry-release.js",
   "shared/lib/storage-helpers.js",
   "shared/lib/string-utils.test.js",
