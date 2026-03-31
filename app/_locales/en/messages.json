@@ -5399,8 +5399,14 @@
   "perpsAvailableBalance": {
     "message": "Available Perps balance: "
   },
+  "perpsAvailableToAdd": {
+    "message": "Available to add"
+  },
   "perpsAvailableToClose": {
     "message": "Available to close"
+  },
+  "perpsAvailableToSubtract": {
+    "message": "Available to subtract"
   },
   "perpsAvailableToTrade": {
     "message": "Available to trade",
@@ -5550,7 +5556,7 @@
     "message": "Current price is near the estimated liquidation price"
   },
   "perpsLiquidationDistance": {
-    "message": "Liq. distance"
+    "message": "Liquidation distance"
   },
   "perpsLiquidationPrice": {
     "message": "Liquidation price"
@@ -5576,12 +5582,6 @@
   },
   "perpsMarkets": {
     "message": "Markets"
-  },
-  "perpsMax": {
-    "message": "Max"
-  },
-  "perpsMaxRemovable": {
-    "message": "Max removable"
   },
   "perpsMid": {
     "message": "Mid"

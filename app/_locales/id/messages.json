@@ -5341,9 +5341,6 @@
     "message": "tersedia",
     "description": "is the available balance amount"
   },
-  "perpsAvailableBalance": {
-    "message": "Saldo tersedia"
-  },
   "perpsAvailableToClose": {
     "message": "Tersedia untuk ditutup"
   },
@@ -5504,12 +5501,6 @@
   },
   "perpsMarkets": {
     "message": "Pasar"
-  },
-  "perpsMax": {
-    "message": "Maks"
-  },
-  "perpsMaxRemovable": {
-    "message": "Maks yang dapat dikurangi"
   },
   "perpsMid": {
     "message": "Tengah"

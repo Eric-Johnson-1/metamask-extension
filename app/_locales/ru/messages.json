@@ -5341,9 +5341,6 @@
     "message": "доступные",
     "description": "is the available balance amount"
   },
-  "perpsAvailableBalance": {
-    "message": "Доступный баланс"
-  },
   "perpsAvailableToClose": {
     "message": "Доступно для закрытия"
   },
@@ -5504,12 +5501,6 @@
   },
   "perpsMarkets": {
     "message": "Рынки"
-  },
-  "perpsMax": {
-    "message": "Максимум"
-  },
-  "perpsMaxRemovable": {
-    "message": "Макс. для снятия"
   },
   "perpsMid": {
     "message": "Сред."

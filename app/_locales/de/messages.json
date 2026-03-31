@@ -5341,9 +5341,6 @@
     "message": "verfügbar",
     "description": "is the available balance amount"
   },
-  "perpsAvailableBalance": {
-    "message": "Verfügbares Guthaben"
-  },
   "perpsAvailableToClose": {
     "message": "Zum Schließen verfügbar"
   },
@@ -5504,12 +5501,6 @@
   },
   "perpsMarkets": {
     "message": "Märkte"
-  },
-  "perpsMax": {
-    "message": "Max."
-  },
-  "perpsMaxRemovable": {
-    "message": "Maximal entfernbar"
   },
   "perpsMid": {
     "message": "Mittelkurs"
