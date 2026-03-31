@@ -1377,6 +1377,14 @@
     "ui/pages/contacts/edit-contact-page.test.tsx": {
       "Reselect: Identity function warnings": 1
     },
+    "ui/pages/create-account/connect-hardware/select-hardware.test.tsx": {
+      "warn: ⚠️ React Router Future Flag": 2
+    },
+    "ui/pages/defi/components/defi-details-list.test.tsx": {
+      "React: Act warnings (component updates not wrapped)": 2,
+      "React: State updates on unmounted components": 1,
+      "Reselect: Identity function warnings": 2
+    },
     "ui/pages/defi/components/defi-details-page.test.tsx": {
       "Reselect: Identity function warnings": 2
     },
