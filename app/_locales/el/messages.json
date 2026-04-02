@@ -339,6 +339,9 @@
   "addWallet": {
     "message": "Προσθήκη πορτοφολιού"
   },
+  "addedProtectionOptionalBadge": {
+    "message": "Προαιρετικά"
+  },
   "additionalNetworks": {
     "message": "Πρόσθετα δίκτυα"
   },
@@ -407,9 +410,6 @@
   "advancedGasFeeDefaultOptIn": {
     "message": "Αποθηκεύστε αυτές τις τιμές ως προεπιλεγμένες για το δίκτυο $1.",
     "description": "$1 is the current network name."
-  },
-  "advancedGasFeeModalTitle": {
-    "message": "Προηγμένη χρέωση τελών συναλλαγής"
   },
   "advancedGasPriceModalTitle": {
     "message": "Τέλη δικτύου για προχωρημένους"
@@ -1348,14 +1348,6 @@
   "cancelPopoverTitle": {
     "message": "Ακύρωση συναλλαγής"
   },
-  "cancelSpeedUpLabel": {
-    "message": "Αυτό το τέλος συναλλαγής θα $1 το αρχικό.",
-    "description": "$1 is text 'replace' in bold"
-  },
-  "cancelSpeedUpTransactionTooltip": {
-    "message": "Για να $1 μια συναλλαγή το τέλος συναλλαγής πρέπει να αυξηθεί κατά τουλάχιστον 10% για να αναγνωριστεί από το δίκτυο.",
-    "description": "$1 is string 'cancel' or 'speed up'"
-  },
   "cancelTransactionDescription": {
     "message": "Αυτή η συναλλαγή θα ακυρωθεί και αυτά τα τέλη δικτύου θα αντικαταστήσουν τα αρχικά."
   },
@@ -2069,10 +2061,6 @@
   "dappSuggestedShortLabel": {
     "message": "Ιστότοπος"
   },
-  "dappSuggestedTooltip": {
-    "message": "Το $1 έχει προτείνει αυτή την τιμή.",
-    "description": "$1 represents the Dapp's origin"
-  },
   "dappSwapAdvantage": {
     "message": "Εξοικονομήστε και κερδίστε με το MetaMask Swaps"
   },
@@ -2523,9 +2511,6 @@
   "editAddressNickname": {
     "message": "Επεξεργασία διεύθυνσης ψευδώνυμου"
   },
-  "editCancellationGasFeeModalTitle": {
-    "message": "Επεξεργασία ακύρωσης τέλους συναλλαγής"
-  },
   "editContact": {
     "message": "Επεξεργασία επαφής"
   },
@@ -2584,9 +2569,6 @@
   "editGasPriceTooltip": {
     "message": "Αυτό το δίκτυο απαιτεί ένα πεδίο \"Τέλος συναλλαγής\" κατά την υποβολή μιας συναλλαγής. Η τιμή τέλους συναλλαγής είναι το ποσό που θα πληρώσετε ανά μονάδα τέλους συναλλαγής."
   },
-  "editGasSubTextFeeLabel": {
-    "message": "Μέγιστο τέλος συναλλαγής:"
-  },
   "editGasTitle": {
     "message": "Επεξεργασία προτεραιότητας"
   },
@@ -2613,9 +2595,6 @@
   },
   "editPermissions": {
     "message": "Επεξεργασία αδειών"
-  },
-  "editSpeedUpEditGasFeeModalTitle": {
-    "message": "Επεξεργαστείτε την ταχύτητα του τέλους συναλλαγής"
   },
   "editSpendingCap": {
     "message": "Επεξεργασία ανώτατου ορίου δαπανών"
@@ -2892,9 +2871,6 @@
   "fast": {
     "message": "Γρήγορα"
   },
-  "feeDetails": {
-    "message": "Λεπτομέρειες χρεώσεων"
-  },
   "fieldRequired": {
     "message": "Απαιτείται η $1"
   },
@@ -3026,9 +3002,6 @@
   },
   "gasLimitV2": {
     "message": "Όριο τέλους συναλλαγής"
-  },
-  "gasOption": {
-    "message": "Επιλογή τέλους συναλλαγής"
   },
   "gasPrice": {
     "message": "Τέλη συναλλαγών"
@@ -3675,18 +3648,6 @@
   "knownTokenWarning": {
     "message": "Αυτή η ενέργεια θα επεξεργαστεί τα tokens που είναι ήδη καταχωρημένα στο πορτοφόλι σας, τα οποία μπορούν να χρησιμοποιηθούν για να σας εξαπατήσουν. Εγκρίνετε μόνο αν είστε σίγουροι ότι θέλετε να αλλάξετε αυτό που αντιπροσωπεύουν αυτά τα tokens. Μάθετε περισσότερα στο $1"
   },
-  "l1Fee": {
-    "message": "Τέλη L1"
-  },
-  "l1FeeTooltip": {
-    "message": "Τέλη συναλλαγών L1"
-  },
-  "l2Fee": {
-    "message": "Τέλη L2"
-  },
-  "l2FeeTooltip": {
-    "message": "Τέλη συναλλαγών L2"
-  },
   "language": {
     "message": "Γλώσσα"
   },
@@ -3699,12 +3660,6 @@
   },
   "lavaDomeCopyWarning": {
     "message": "Για την ασφάλειά σας, η επιλογή αυτού του κειμένου δεν είναι διαθέσιμη αυτή τη στιγμή."
-  },
-  "layer1Fees": {
-    "message": "Τέλη επιπέδου 1"
-  },
-  "layer2Fees": {
-    "message": "Τέλη επιπέδου 2"
   },
   "learnHow": {
     "message": "Μάθετε πώς"
@@ -3837,9 +3792,6 @@
   },
   "links": {
     "message": "Σύνδεσμοι"
-  },
-  "loadMore": {
-    "message": "Φορτώστε περισσότερα"
   },
   "loading": {
     "message": "Φόρτωση..."
@@ -3982,9 +3934,6 @@
   },
   "maxFeeTooltip": {
     "message": "Τα μέγιστα τέλη που προβλέπονται για την πληρωμή της συναλλαγής."
-  },
-  "maxPriorityFee": {
-    "message": "Μέγιστη προτεραιότητα τέλους"
   },
   "medium": {
     "message": "Τιμή αγοράς"
@@ -4200,8 +4149,8 @@
     "description": "Label for the claimable bonus row in the mUSD conversion confirmation screen"
   },
   "musdClaimableBonusTooltip": {
-    "message": "Έχετε κερδίσει $1% ετήσιο μπόνους επειδή διατηρήσατε τα mUSD. Το μπόνους σας μπορείτε να το εξαργυρώσετε καθημερινά στο δίκτυο Linea. Με την υποστήριξη του Relay. $2",
-    "description": "$1 is the APY percentage, $2 is the 'Terms apply' link"
+    "message": "Το ετήσιο μπόνους που έχετε κερδίσει για τη διατήρηση mUSD. Το μπόνους σας μπορείτε να το εξαργυρώσετε καθημερινά στο δίκτυο Linea. $1",
+    "description": "$1 is the 'Terms apply' link"
   },
   "musdConversionActivityTitle": {
     "message": "Μετατρέψτε $1 σε mUSD",
@@ -4225,16 +4174,12 @@
     "message": "Μετατρέψτε και κερδίστε $1%",
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
-  "musdEarnBonusPercentage": {
-    "message": "Κερδίστε $1% σε μπόνους",
-    "description": "$1 is the bonus percentage (e.g., 3)"
-  },
   "musdEducationGetStarted": {
     "message": "Ξεκινήστε"
   },
   "musdEducationHeadline": {
     "message": "ΚΕΡΔΙΣΤΕ $1% ΣΤΑ STABLECOINS",
-    "description": "$1 is the bonus APY percentage"
+    "description": "$1 is the bonus APY percentage. Line break between ON and STABLECOINS matches splash layout."
   },
   "musdEducationNotNow": {
     "message": "Όχι τώρα"
@@ -4411,9 +4356,6 @@
   },
   "networkFeeExplanationTitle": {
     "message": "Τέλη δικτύου"
-  },
-  "networkIsBusy": {
-    "message": "Το δίκτυο είναι απασχολημένο. Τα τέλη συναλλαγής είναι υψηλά και οι εκτιμήσεις είναι λιγότερο ακριβείς."
   },
   "networkMenu": {
     "message": "Μενού δικτύου"
@@ -5693,9 +5635,6 @@
   },
   "perpsPosition": {
     "message": "Θέση"
-  },
-  "perpsPositionClosedReverseOrderFailed": {
-    "message": "Η θέση σας έκλεισε, αλλά η αντίστροφη εντολή απέτυχε. Ίσως χρειαστεί να ανοίξετε χειροκίνητα μια νέα θέση"
   },
   "perpsPositionSize": {
     "message": "Μέγεθος θέσης"
@@ -8851,9 +8790,6 @@
   },
   "transactionDetailGasHeading": {
     "message": "Εκτιμώμενα τέλη συναλλαγών"
-  },
-  "transactionDetailMultiLayerTotalSubtitle": {
-    "message": "Ποσά + τέλη"
   },
   "transactionError": {
     "message": "Σφάλμα συναλλαγής. Βρέθηκε εξαίρεση στον κωδικό του συμβολαίου."

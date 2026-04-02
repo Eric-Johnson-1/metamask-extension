@@ -339,6 +339,9 @@
   "addWallet": {
     "message": "ウォレットを追加"
   },
+  "addedProtectionOptionalBadge": {
+    "message": "オプション"
+  },
   "additionalNetworks": {
     "message": "他のネットワーク"
   },
@@ -407,9 +410,6 @@
   "advancedGasFeeDefaultOptIn": {
     "message": "これらの値を$1ネットワークのデフォルトとして保存する",
     "description": "$1 is the current network name."
-  },
-  "advancedGasFeeModalTitle": {
-    "message": "ガス代の高度な設定"
   },
   "advancedGasPriceModalTitle": {
     "message": "詳細なネットワーク手数料"
@@ -1348,14 +1348,6 @@
   "cancelPopoverTitle": {
     "message": "トランザクションのキャンセル"
   },
-  "cancelSpeedUpLabel": {
-    "message": "このガス代が元のガス代に$1されます。",
-    "description": "$1 is text 'replace' in bold"
-  },
-  "cancelSpeedUpTransactionTooltip": {
-    "message": "トランザクションを$1するには、ネットワークに認識されるようガス代を10%以上増やす必要があります。",
-    "description": "$1 is string 'cancel' or 'speed up'"
-  },
   "cancelTransactionDescription": {
     "message": "このトランザクションはキャンセルされ、このネットワーク手数料が元の手数料に代わって適用されます。"
   },
@@ -2069,10 +2061,6 @@
   "dappSuggestedShortLabel": {
     "message": "サイト"
   },
-  "dappSuggestedTooltip": {
-    "message": "$1はこの価格を推奨しています。",
-    "description": "$1 represents the Dapp's origin"
-  },
   "dappSwapAdvantage": {
     "message": "MetaMaskスワップで貯めて収益化"
   },
@@ -2523,9 +2511,6 @@
   "editAddressNickname": {
     "message": "アドレスのニックネームを編集"
   },
-  "editCancellationGasFeeModalTitle": {
-    "message": "キャンセル用のガス代を変更"
-  },
   "editContact": {
     "message": "連絡先を編集"
   },
@@ -2584,9 +2569,6 @@
   "editGasPriceTooltip": {
     "message": "このネットワークは、トランザクションの送信時に「ガス価格」フィールドが必要です。ガス価格は、ガス1単位あたりに支払う金額です。"
   },
-  "editGasSubTextFeeLabel": {
-    "message": "最大手数料:"
-  },
   "editGasTitle": {
     "message": "優先度を編集"
   },
@@ -2613,9 +2595,6 @@
   },
   "editPermissions": {
     "message": "アクセス許可を編集"
-  },
-  "editSpeedUpEditGasFeeModalTitle": {
-    "message": "スピードアップ用のガス代を変更"
   },
   "editSpendingCap": {
     "message": "使用上限の編集"
@@ -2892,9 +2871,6 @@
   "fast": {
     "message": "高速"
   },
-  "feeDetails": {
-    "message": "手数料の詳細"
-  },
   "fieldRequired": {
     "message": "$1は必須項目です"
   },
@@ -3026,9 +3002,6 @@
   },
   "gasLimitV2": {
     "message": "ガスリミット"
-  },
-  "gasOption": {
-    "message": "ガスのオプション"
   },
   "gasPrice": {
     "message": "ガス価格 (gwei)"
@@ -3675,18 +3648,6 @@
   "knownTokenWarning": {
     "message": "このアクションは、ウォレットに既に一覧表示されているトークンを編集します。これは、フィッシングに使用される可能性があります。これらのトークンの表す内容を変更する意図が確実な場合にのみ承認します。$1に関する詳細をご覧ください"
   },
-  "l1Fee": {
-    "message": "L1手数料"
-  },
-  "l1FeeTooltip": {
-    "message": "L1ガス代"
-  },
-  "l2Fee": {
-    "message": "L2手数料"
-  },
-  "l2FeeTooltip": {
-    "message": "L2ガス代"
-  },
   "language": {
     "message": "言語"
   },
@@ -3699,12 +3660,6 @@
   },
   "lavaDomeCopyWarning": {
     "message": "安全上の理由により、現在このテキストは選択できません。"
-  },
-  "layer1Fees": {
-    "message": "レイヤー1手数料"
-  },
-  "layer2Fees": {
-    "message": "レイヤー 2 手数料"
   },
   "learnHow": {
     "message": "方法"
@@ -3837,9 +3792,6 @@
   },
   "links": {
     "message": "リンク"
-  },
-  "loadMore": {
-    "message": "さらにロード"
   },
   "loading": {
     "message": "読み込み中..."
@@ -3982,9 +3934,6 @@
   },
   "maxFeeTooltip": {
     "message": "トランザクションの支払いに提供される最大手数料"
-  },
-  "maxPriorityFee": {
-    "message": "最大優先手数料"
   },
   "medium": {
     "message": "マーケット"
@@ -4200,8 +4149,8 @@
     "description": "Label for the claimable bonus row in the mUSD conversion confirmation screen"
   },
   "musdClaimableBonusTooltip": {
-    "message": "mUSDを保有することで獲得した年換算$1%のボーナスです。ボーナスはLineaで毎日請求できます。Powered by Relay。$2",
-    "description": "$1 is the APY percentage, $2 is the 'Terms apply' link"
+    "message": "mUSDを保有することで獲得した年換算のボーナスです。ボーナスはLineaで毎日請求できます。$1",
+    "description": "$1 is the 'Terms apply' link"
   },
   "musdConversionActivityTitle": {
     "message": "$1をmUSDに変換",
@@ -4225,16 +4174,12 @@
     "message": "換金して$1%獲得",
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
-  "musdEarnBonusPercentage": {
-    "message": "$1%のボーナスを獲得",
-    "description": "$1 is the bonus percentage (e.g., 3)"
-  },
   "musdEducationGetStarted": {
     "message": "利用を開始する"
   },
   "musdEducationHeadline": {
     "message": "ステーブルコインで$1%をゲット",
-    "description": "$1 is the bonus APY percentage"
+    "description": "$1 is the bonus APY percentage. Line break between ON and STABLECOINS matches splash layout."
   },
   "musdEducationNotNow": {
     "message": "後で"
@@ -4411,9 +4356,6 @@
   },
   "networkFeeExplanationTitle": {
     "message": "ネットワーク手数料"
-  },
-  "networkIsBusy": {
-    "message": "ネットワークが混雑しています。ガス代が高く、見積もりはあまり正確ではありません。"
   },
   "networkMenu": {
     "message": "ネットワークメニュー"
@@ -5693,9 +5635,6 @@
   },
   "perpsPosition": {
     "message": "ポジション"
-  },
-  "perpsPositionClosedReverseOrderFailed": {
-    "message": "ポジションはクローズされましたが、反転注文に失敗しました。新しいポジションを手動でオープンする必要があるかもしれません。"
   },
   "perpsPositionSize": {
     "message": "ポジションサイズ"
@@ -8851,9 +8790,6 @@
   },
   "transactionDetailGasHeading": {
     "message": "ガス代見積もり"
-  },
-  "transactionDetailMultiLayerTotalSubtitle": {
-    "message": "金額 + 手数料"
   },
   "transactionError": {
     "message": "トランザクションエラー。コントラクトコードで例外がスローされました。"
