@@ -289,6 +289,9 @@
     "ui/components/app/name/name-details/name-details.test.tsx": {
       "React: Act warnings (component updates not wrapped)": 12
     },
+    "ui/components/app/perps/cancel-order/cancel-order-modal.test.tsx": {
+      "React: Act warnings (component updates not wrapped)": 13
+    },
     "ui/components/app/perps/close-position/close-position-modal.test.tsx": {
       "React: Act warnings (component updates not wrapped)": 2
     },
@@ -1490,7 +1493,8 @@
       "React: DOM nesting violations": 3
     },
     "ui/pages/perps/perps-market-detail-page.test.tsx": {
-      "React: Act warnings (component updates not wrapped)": 5
+      "React: Act warnings (component updates not wrapped)": 5,
+      "React: State updates on unmounted components": 1
     },
     "ui/pages/perps/perps-order-entry-page.test.tsx": {
       "React: componentWill* lifecycle deprecations": 1

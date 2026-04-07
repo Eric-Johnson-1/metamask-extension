@@ -4559,6 +4559,9 @@
   "nickname": {
     "message": "Nickname"
   },
+  "no": {
+    "message": "No"
+  },
   "noAccountsFound": {
     "message": "No accounts found for the given search query"
   },
@@ -5435,6 +5438,9 @@
   "perpsCancelAllOrders": {
     "message": "Cancel all"
   },
+  "perpsCancelOrder": {
+    "message": "Cancel order"
+  },
   "perpsCloseAll": {
     "message": "Close all"
   },
@@ -5641,6 +5647,18 @@
   "perpsOraclePriceTooltip": {
     "message": "The median of external prices reported by validators, used for computing funding rate"
   },
+  "perpsOrderDate": {
+    "message": "Date"
+  },
+  "perpsOrderOriginalSize": {
+    "message": "Original size"
+  },
+  "perpsOrderStatus": {
+    "message": "Status"
+  },
+  "perpsOrderValue": {
+    "message": "Order value"
+  },
   "perpsOrders": {
     "message": "Orders"
   },
@@ -5664,6 +5682,9 @@
   },
   "perpsReduceExposureDescriptionShort": {
     "message": "Decrease the size of your short position"
+  },
+  "perpsReduceOnly": {
+    "message": "Reduce only"
   },
   "perpsRemoveFromFavorites": {
     "message": "Remove from favorites"
@@ -5767,6 +5788,14 @@
   "perpsTakeProfit": {
     "message": "Take Profit",
     "description": "Label for take profit price input"
+  },
+  "perpsToastCancelOrderFailed": {
+    "message": "Failed to cancel order",
+    "description": "Error toast text shown when cancelling a perps limit order fails"
+  },
+  "perpsToastCancelOrderSuccess": {
+    "message": "Order cancelled",
+    "description": "Success toast text shown when a perps limit order is successfully cancelled"
   },
   "perpsToastCloseFailed": {
     "message": "Failed to close position",
