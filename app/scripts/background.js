@@ -1266,8 +1266,10 @@ function trackDappView(remotePort) {
 
 /**
  * Emit App Opened event
+ *
+ * @param {string} environmentType - The environment type where the app is opening
  */
-function emitAppOpenedMetricEvent() {
+function emitAppOpenedMetricEvent(environmentType) {
   const { metaMetricsId, participateInMetaMetrics } =
     controller.metaMetricsController.state;
 
@@ -1279,6 +1281,7 @@ function emitAppOpenedMetricEvent() {
   controller.metaMetricsController.trackEvent({
     event: MetaMetricsEventName.AppOpened,
     category: MetaMetricsEventCategory.App,
+    environmentType,
   });
 }
 
@@ -1294,6 +1297,7 @@ function trackAppOpened(environment) {
     ENVIRONMENT_TYPE_POPUP,
     ENVIRONMENT_TYPE_NOTIFICATION,
     ENVIRONMENT_TYPE_FULLSCREEN,
+    ENVIRONMENT_TYPE_SIDEPANEL,
   ];
 
   // Check if any UI instances are currently open
@@ -1306,7 +1310,7 @@ function trackAppOpened(environment) {
 
   // Only emit event if no UI is open and environment is valid
   if (!isAlreadyOpen && environmentTypeList.includes(environment)) {
-    emitAppOpenedMetricEvent();
+    emitAppOpenedMetricEvent(environment);
   }
 }
 
