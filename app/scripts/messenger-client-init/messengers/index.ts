@@ -349,11 +349,6 @@ export {
 } from './signature-controller-messenger';
 export type { SubjectMetadataControllerMessenger } from './subject-metadata-controller-messenger';
 export { getSubjectMetadataControllerMessenger } from './subject-metadata-controller-messenger';
-export type {
-  RewardsControllerMessenger,
-  RewardsControllerActions,
-  RewardsControllerEvents,
-} from './rewards-controller-messenger';
 export { getRewardsControllerMessenger } from './rewards-controller-messenger';
 export type {
   TokenBalancesControllerMessenger,
