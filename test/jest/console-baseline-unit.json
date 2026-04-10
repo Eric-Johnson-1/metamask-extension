@@ -286,6 +286,9 @@
     "ui/components/app/name/name-details/name-details.test.tsx": {
       "React: Act warnings (component updates not wrapped)": 12
     },
+    "ui/components/app/perps/close-position/close-position-modal.test.tsx": {
+      "React: Act warnings (component updates not wrapped)": 2
+    },
     "ui/components/app/perps/order-entry/components/auto-close-section/auto-close-section.test.tsx": {
       "React: componentWill* lifecycle deprecations": 1
     },
@@ -453,7 +456,7 @@
       "Reselect: Input stability warnings": 4
     },
     "ui/components/multichain/app-header/app-header.test.js": {
-      "React: Act warnings (component updates not wrapped)": 6,
+      "React: Act warnings (component updates not wrapped)": 4,
       "Reselect: Identity function warnings": 1,
       "Reselect: Input stability warnings": 4
     },
@@ -625,6 +628,9 @@
     "ui/hooks/useDisplayName.test.ts": {
       "Reselect: Identity function warnings": 1,
       "error: Unexpected key \"DNS\" found in": 1
+    },
+    "ui/hooks/useHardwareWalletRecoveryLocation.test.tsx": {
+      "Reselect: Identity function warnings": 1
     },
     "ui/hooks/useMultiPolling.test.ts": {
       "error: Error: Network error": 1
@@ -1122,7 +1128,7 @@
       "Reselect: Identity function warnings": 4
     },
     "ui/pages/confirmations/confirm/confirm.test.tsx": {
-      "MetaMask: Background connection not initialized": 262,
+      "MetaMask: Background connection not initialized": 235,
       "React: Act warnings (component updates not wrapped)": 3,
       "Reselect: Identity function warnings": 7
     },
@@ -1166,7 +1172,6 @@
       "Reselect: Identity function warnings": 3
     },
     "ui/pages/confirmations/hooks/alerts/transactions/useGasFeeLowAlerts.test.tsx": {
-      "MetaMask: Background connection not initialized": 27,
       "Reselect: Identity function warnings": 3
     },
     "ui/pages/confirmations/hooks/alerts/transactions/useGasSponsorshipWarningAlerts.test.ts": {
@@ -1375,11 +1380,22 @@
     "ui/pages/contacts/edit-contact-page.test.tsx": {
       "Reselect: Identity function warnings": 1
     },
+    "ui/pages/create-account/connect-hardware/select-hardware.test.tsx": {
+      "warn: ⚠️ React Router Future Flag": 2
+    },
+    "ui/pages/defi/components/defi-details-list.test.tsx": {
+      "React: Act warnings (component updates not wrapped)": 2,
+      "React: State updates on unmounted components": 1,
+      "Reselect: Identity function warnings": 2
+    },
     "ui/pages/defi/components/defi-details-page.test.tsx": {
       "Reselect: Identity function warnings": 2
     },
     "ui/pages/error-page/error-component.test.tsx": {
       "React: Act warnings (component updates not wrapped)": 2
+    },
+    "ui/pages/home/home.container.test.tsx": {
+      "Reselect: Input stability warnings": 1
     },
     "ui/pages/multichain-accounts/account-list/account-list.test.tsx": {
       "Reselect: Identity function warnings": 1
@@ -1459,6 +1475,9 @@
     "ui/pages/perps/perps-order-entry-page.test.tsx": {
       "React: componentWill* lifecycle deprecations": 1
     },
+    "ui/pages/perps/perps-withdraw-page.test.tsx": {
+      "React: Act warnings (component updates not wrapped)": 10
+    },
     "ui/pages/remove-snap-account/remove-snap-account.test.tsx": {
       "Reselect: Identity function warnings": 1
     },
@@ -1473,7 +1492,7 @@
     "ui/pages/settings-v2/assets-tab/assets-tab.test.tsx": {
       "React: componentWill* lifecycle deprecations": 1
     },
-    "ui/pages/settings-v2/developer-options-tab/developer-options-tab.test.tsx": {
+    "ui/pages/settings-v2/developer-tools-tab/developer-tools-tab.test.tsx": {
       "React: componentWill* lifecycle deprecations": 1
     },
     "ui/pages/settings-v2/preferences-and-display-tab/account-identicon-item.test.tsx": {
