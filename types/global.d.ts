@@ -25,6 +25,10 @@ import {
 import type { Preferences } from '../app/scripts/controllers/preferences-controller';
 import type ExtensionPlatform from '../app/scripts/platforms/extension';
 import type { ExtensionLazyListener } from '../app/scripts/lib/extension-lazy-listener/extension-lazy-listener';
+import type {
+  LongTaskMetrics,
+  LongTaskMetricsWithTBT,
+} from '../ui/helpers/utils/performance-observers';
 
 declare class MessageSender {
   documentId?: string;
@@ -288,6 +292,47 @@ type StateHooks = {
    * tests.
    */
   reloadExtension?: () => void;
+
+  // Long Task / TBT metrics for E2E benchmarks
+  getLongTaskMetrics?: (reset?: boolean) => LongTaskMetrics;
+  getLongTaskMetricsWithTBT?: (reset?: boolean) => LongTaskMetricsWithTBT;
+  resetLongTaskMetrics?: () => void;
+
+  /**
+   * Initialize Core Web Vitals observers (INP, LCP, CLS).
+   *
+   * @see ui/helpers/utils/web-vitals.ts
+   */
+  initWebVitals?: () => void;
+  /**
+   * Get current Core Web Vitals metrics.
+   * Returns stored INP, FCP, LCP, and CLS values with their ratings.
+   */
+  getWebVitalsMetrics?: () => {
+    inp: number | null;
+    fcp: number | null;
+    lcp: number | null;
+    cls: number | null;
+    inpRating: 'good' | 'needs-improvement' | 'poor' | null;
+    fcpRating: 'good' | 'needs-improvement' | 'poor' | null;
+    lcpRating: 'good' | 'needs-improvement' | 'poor' | null;
+    clsRating: 'good' | 'needs-improvement' | 'poor' | null;
+  };
+  /**
+   * Reset Core Web Vitals metrics to initial null state.
+   * Useful for clearing metrics between benchmark runs.
+   */
+  resetWebVitalsMetrics?: () => void;
+
+  // Agentic dev hooks (METAMASK_DEBUG only) — expose internals for CDP automation.
+  // Typed as `unknown` because these are untyped debug-only entry points consumed
+  // by CDP automation scripts that perform their own runtime checks.
+  store?: unknown;
+  submitRequestToBackground?: (
+    method: string,
+    args?: unknown[],
+  ) => Promise<unknown>;
+  getPerpsStreamManager?: () => unknown;
 };
 
 export declare global {
