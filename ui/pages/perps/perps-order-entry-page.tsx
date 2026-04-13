@@ -77,6 +77,7 @@ import {
   getPositionPnlRatio,
   normalizeTpslPrices,
   safeDecodeURIComponent,
+  formatChangePercent,
 } from '../../components/app/perps/utils';
 import {
   isLimitPriceUnfavorable as checkLimitPriceUnfavorable,
@@ -522,8 +523,10 @@ const PerpsOrderEntryPage: React.FC = () => {
     return market?.price ?? '$0.00';
   }, [chartCurrentPrice, market?.price, formatNumber]);
 
-  const displayChange =
-    livePrice?.percentChange24h ?? market?.change24hPercent ?? '';
+  // 24h change prefers live stream updates when available, with market-data fallback.
+  const displayChange = formatChangePercent(
+    livePrice?.percentChange24h ?? market?.change24hPercent ?? '',
+  );
 
   const handleBackClick = useCallback(
     (perpsToastKey?: PerpsToastKey, perpsToastDescription?: string) => {
