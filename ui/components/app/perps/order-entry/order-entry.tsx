@@ -312,6 +312,8 @@ export const OrderEntry: React.FC<OrderEntryProps> = ({
                   })()
                 : undefined
             }
+            orderType={formState.type}
+            limitPrice={formState.limitPrice}
           />
         )}
 
