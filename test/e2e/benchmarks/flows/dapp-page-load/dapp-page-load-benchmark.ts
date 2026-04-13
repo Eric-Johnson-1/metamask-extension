@@ -132,7 +132,7 @@ export class PageLoadBenchmark {
     const deadline = Date.now() + timeoutMs;
 
     while (Date.now() < deadline) {
-      if (this.dappServerProcess?.exitCode != null) {
+      if (typeof this.dappServerProcess?.exitCode === 'number') {
         throw new Error(
           `Dapp server process exited with code ${this.dappServerProcess.exitCode} before ${DAPP_URL} became ready`,
         );
