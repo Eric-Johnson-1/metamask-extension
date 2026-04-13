@@ -195,12 +195,13 @@ const PerpsOrderEntryPage: React.FC = () => {
   trackRef.current = track;
   const tradeConfigurations = useSelector(selectPerpsTradeConfigurations);
   const isTestnet = useSelector(selectPerpsIsTestnet);
-  const { trigger: triggerDeposit } = usePerpsDepositConfirmation();
+  const { trigger: triggerDeposit, isLoading: isDepositLoading } =
+    usePerpsDepositConfirmation();
   const { formatPercentWithMinThreshold } = useFormatters();
   const { replacePerpsToastByKey, hidePerpsToast } = usePerpsToast();
 
   const { positions: allPositions } = usePerpsLivePositions();
-  const { account } = usePerpsLiveAccount();
+  const { account, isInitialLoading: isLoadingAccount } = usePerpsLiveAccount();
   const { markets: allMarkets, isInitialLoading: marketsLoading } =
     usePerpsLiveMarketData();
 
@@ -424,6 +425,9 @@ const PerpsOrderEntryPage: React.FC = () => {
   const availableBalance = account
     ? Number.parseFloat(account.availableBalance)
     : 0;
+  const hasNoAvailableBalance =
+    orderMode === 'new' && !isLoadingAccount && availableBalance <= 0;
+  const isPrimaryTradeAction = orderMode !== 'new' || !hasNoAvailableBalance;
 
   const isLimitPriceUnfavorable = useMemo(() => {
     if (orderType !== 'limit' || !orderFormState) {
@@ -506,13 +510,16 @@ const PerpsOrderEntryPage: React.FC = () => {
   const isSubmitDisabled =
     !isEligible ||
     !selectedAddress ||
+    isDepositLoading ||
     isOrderPending ||
-    isLimitPriceInvalid ||
-    isLimitPriceUnfavorable ||
-    isNearLiquidation ||
-    hasInvalidTPSL ||
-    isInsufficientFunds ||
-    currentPrice <= 0;
+    (orderMode === 'new' && isLoadingAccount) ||
+    (isPrimaryTradeAction &&
+      (isLimitPriceInvalid ||
+        isLimitPriceUnfavorable ||
+        isNearLiquidation ||
+        hasInvalidTPSL ||
+        isInsufficientFunds ||
+        currentPrice <= 0));
 
   const maxLeverage = useMemo(() => {
     if (!market) {
@@ -986,6 +993,26 @@ const PerpsOrderEntryPage: React.FC = () => {
     closeFeeRate,
   ]);
 
+  const handlePrimaryAction = useCallback(async () => {
+    if (hasNoAvailableBalance) {
+      if (!isEligible || !selectedAddress || isDepositLoading) {
+        return;
+      }
+
+      await triggerDeposit();
+      return;
+    }
+
+    await handleOrderSubmit();
+  }, [
+    handleOrderSubmit,
+    hasNoAvailableBalance,
+    isDepositLoading,
+    isEligible,
+    selectedAddress,
+    triggerDeposit,
+  ]);
+
   useEffect(() => {
     if (!pendingOrderSymbol) {
       return;
@@ -1064,6 +1091,10 @@ const PerpsOrderEntryPage: React.FC = () => {
   const displayName = getDisplayName(market.symbol);
   const isLong = orderDirection === 'long';
   const submitButtonText = (() => {
+    if (hasNoAvailableBalance) {
+      return t('addFunds');
+    }
+
     switch (orderMode) {
       case 'modify':
         return t('perpsModifyPosition');
@@ -1078,9 +1109,10 @@ const PerpsOrderEntryPage: React.FC = () => {
     }
   })();
 
-  const resolvedButtonText = isInsufficientFunds
-    ? t('insufficientFundsSend')
-    : submitButtonText;
+  const resolvedButtonText =
+    isPrimaryTradeAction && isInsufficientFunds
+      ? t('insufficientFundsSend')
+      : submitButtonText;
 
   return (
     <Box
@@ -1205,7 +1237,7 @@ const PerpsOrderEntryPage: React.FC = () => {
         <Button
           variant={ButtonVariant.Primary}
           size={ButtonSize.Lg}
-          onClick={handleOrderSubmit}
+          onClick={handlePrimaryAction}
           disabled={isSubmitDisabled}
           title={isEligible ? undefined : t('perpsGeoBlockedTooltip')}
           className={twMerge(
