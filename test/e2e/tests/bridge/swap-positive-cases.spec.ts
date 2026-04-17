@@ -15,7 +15,6 @@ describe('Swap tests', function (this: Suite) {
           this.test?.fullTitle(),
           { ...BRIDGE_FEATURE_FLAGS_WITH_SSE_ENABLED, refreshRate: 30000 },
           false,
-          true,
         ),
       },
       async ({ driver, mockedEndpoint: mockedEndpoints }) => {
@@ -38,6 +37,7 @@ describe('Swap tests', function (this: Suite) {
           },
           submitDelay: 10000,
           expectedDestAmount: '3,839',
+          dismissStatusPage: true,
         });
 
         const events = await getEventPayloads(driver, mockedEndpoints);
@@ -95,7 +95,6 @@ describe('Swap tests', function (this: Suite) {
         this.test?.fullTitle(),
         BRIDGE_FEATURE_FLAGS_WITH_SSE_ENABLED,
         false,
-        true,
       ),
       async ({ driver, mockedEndpoint: mockedEndpoints }) => {
         await login(driver, { expectedBalance: '$225,730.11' });
