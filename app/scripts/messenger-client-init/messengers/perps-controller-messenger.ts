@@ -17,7 +17,13 @@ import {
   RemoteFeatureFlagControllerGetStateAction,
   RemoteFeatureFlagControllerStateChangeEvent,
 } from '@metamask/remote-feature-flag-controller';
+import {
+  StorageServiceGetItemAction,
+  StorageServiceRemoveItemAction,
+  StorageServiceSetItemAction,
+} from '@metamask/storage-service';
 import { TransactionControllerAddTransactionAction } from '@metamask/transaction-controller';
+import { MetaMetricsControllerTrackEventAction } from '../../controllers/metametrics-controller-method-action-types';
 import { RootMessenger } from '../../lib/messenger';
 
 type AllowedActions =
@@ -29,7 +35,11 @@ type AllowedActions =
   | TransactionControllerAddTransactionAction
   | RemoteFeatureFlagControllerGetStateAction
   | AccountTreeControllerGetAccountsFromSelectedAccountGroupAction
-  | AuthenticationController.AuthenticationControllerGetBearerTokenAction;
+  | AuthenticationController.AuthenticationControllerGetBearerTokenAction
+  | MetaMetricsControllerTrackEventAction
+  | StorageServiceGetItemAction
+  | StorageServiceSetItemAction
+  | StorageServiceRemoveItemAction;
 
 type AllowedEvents =
   | RemoteFeatureFlagControllerStateChangeEvent
@@ -72,6 +82,10 @@ export function getPerpsControllerMessenger(
       'RemoteFeatureFlagController:getState',
       'AccountTreeController:getAccountsFromSelectedAccountGroup',
       'AuthenticationController:getBearerToken',
+      'MetaMetricsController:trackEvent',
+      'StorageService:getItem',
+      'StorageService:setItem',
+      'StorageService:removeItem',
     ],
     events: [
       'RemoteFeatureFlagController:stateChange',
