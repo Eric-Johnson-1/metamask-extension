@@ -49,7 +49,7 @@ describe('Swap', function () {
             quote: testCase.quote,
             expectedTransactionsCount: testCase.expectedTransactionsCount,
             expectedDestAmount: testCase.expectedDestAmount,
-            skipStatusPage: true,
+            skipStatusPage: false,
           });
         },
       );

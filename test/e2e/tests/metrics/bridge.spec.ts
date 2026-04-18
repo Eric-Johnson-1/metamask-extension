@@ -47,7 +47,7 @@ describe('Bridge tests', function (this: Suite) {
           quote,
           expectedTransactionsCount: 2,
           expectedDestAmount: '0.0157',
-          skipStatusPage: true,
+          skipStatusPage: false,
         });
 
         const inputChangesCount1 = await checkInputChangedEvents(

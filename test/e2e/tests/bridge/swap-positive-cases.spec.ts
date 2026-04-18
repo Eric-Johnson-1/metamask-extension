@@ -39,7 +39,7 @@ describe('Swap tests', function (this: Suite) {
           },
           submitDelay: 10000,
           expectedDestAmount: '3,839',
-          skipStatusPage: true,
+          skipStatusPage: false,
         });
 
         const events = await getEventPayloads(driver, mockedEndpoints);
@@ -117,7 +117,7 @@ describe('Swap tests', function (this: Suite) {
             tokenTo: 'MUSD',
           },
           expectedDestAmount: '3.011',
-          skipStatusPage: true,
+          skipStatusPage: false,
         });
 
         const events = (await getEventPayloads(driver, mockedEndpoints)).filter(
