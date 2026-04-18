@@ -41,6 +41,7 @@ describe('Bridge tests', function (this: Suite) {
           },
           expectedTransactionsCount: 2,
           expectedDestAmount: '0.0157',
+          skipStatusPage: true,
         });
 
         await bridgeTransaction({
@@ -54,6 +55,7 @@ describe('Bridge tests', function (this: Suite) {
           },
           expectedTransactionsCount: 3,
           expectedDestAmount: '1,642',
+          skipStatusPage: true,
         });
         await bridgeTransaction({
           driver,
@@ -66,6 +68,7 @@ describe('Bridge tests', function (this: Suite) {
           },
           expectedTransactionsCount: 4,
           expectedDestAmount: '0.991',
+          skipStatusPage: true,
         });
 
         await homePage.goToTokensTab();
@@ -83,6 +86,7 @@ describe('Bridge tests', function (this: Suite) {
           },
           expectedTransactionsCount: 6,
           expectedDestAmount: '9.9',
+          skipStatusPage: true,
         });
       },
     );
@@ -156,6 +160,7 @@ describe('Bridge tests', function (this: Suite) {
           },
           expectedTransactionsCount: 2,
           expectedDestAmount: '9.9',
+          skipStatusPage: true,
         });
         const finalQuoteRequestTimestamp = Date.now();
         const bridgePage = new BridgeQuotePage(driver);
