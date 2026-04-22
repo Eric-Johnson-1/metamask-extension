@@ -689,7 +689,7 @@ const PerpsMarketDetailPage: React.FC = () => {
   }, []);
 
   const handleBackClick = useCallback(() => {
-    navigate(DEFAULT_ROUTE);
+    navigate(-1);
   }, [navigate]);
 
   const buildOrderEntryUrl = useCallback(
