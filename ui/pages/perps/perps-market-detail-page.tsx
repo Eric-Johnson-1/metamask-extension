@@ -275,7 +275,8 @@ const PerpsMarketDetailPage: React.FC = () => {
     formatPercentWithMinThreshold,
   } = useFormatters();
   const fundingCountdown = useFundingCountdown();
-  const { replacePerpsToastByKey } = usePerpsToast();
+  const { replacePerpsToastByKey, pendingOrder, setPendingOrder } =
+    usePerpsToast();
   const [isGeoBlockModalOpen, setIsGeoBlockModalOpen] = useState(false);
 
   useEffect(() => {
@@ -312,11 +313,14 @@ const PerpsMarketDetailPage: React.FC = () => {
       return;
     }
 
+    // Primary: read from shared toast context (set by order entry via navigate(-1) flow).
+    // Fallback: read from location.state for any remaining route-state-based navigation.
     const routeState = location.state as Record<string, unknown> | null;
     const pendingSymbol =
-      typeof routeState?.pendingOrderSymbol === 'string'
+      pendingOrder?.symbol ??
+      (typeof routeState?.pendingOrderSymbol === 'string'
         ? routeState.pendingOrderSymbol
-        : null;
+        : null);
 
     if (!pendingSymbol) {
       return;
@@ -327,16 +331,25 @@ const PerpsMarketDetailPage: React.FC = () => {
       orderFilledToastShownRef.current = true;
 
       const filledDescription =
-        typeof routeState?.pendingOrderFilledDescription === 'string'
+        pendingOrder?.filledDescription ??
+        (typeof routeState?.pendingOrderFilledDescription === 'string'
           ? routeState.pendingOrderFilledDescription
-          : undefined;
+          : undefined);
 
       replacePerpsToastByKey({
         key: PERPS_TOAST_KEYS.ORDER_FILLED,
         ...(filledDescription ? { description: filledDescription } : {}),
       });
+
+      setPendingOrder(null);
     }
-  }, [location.state, allPositions, replacePerpsToastByKey]);
+  }, [
+    location.state,
+    allPositions,
+    replacePerpsToastByKey,
+    pendingOrder,
+    setPendingOrder,
+  ]);
 
   const { orders: allOrders } = usePerpsLiveOrders();
   const { account, isInitialLoading: isLoadingAccount } = usePerpsLiveAccount();
