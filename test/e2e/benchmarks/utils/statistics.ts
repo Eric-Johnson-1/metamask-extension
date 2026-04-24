@@ -168,7 +168,7 @@ export const detectOutliersZScore = (
   threshold: number = Z_SCORE_THRESHOLD,
 ): { filtered: number[]; outlierCount: number; outliers: number[] } => {
   if (values.length < 3) {
-    return { filtered: values, outlierCount: 0, outliers: [] };
+    return { filtered: [...values], outlierCount: 0, outliers: [] };
   }
 
   const mean = calculateMean(values);
@@ -197,7 +197,7 @@ export const detectOutliersIQR = (
   values: number[],
 ): { filtered: number[]; outlierCount: number; outliers: number[] } => {
   if (values.length < 4) {
-    return { filtered: values, outlierCount: 0, outliers: [] };
+    return { filtered: [...values], outlierCount: 0, outliers: [] };
   }
 
   const sorted = [...values].sort((a, b) => a - b);
@@ -353,13 +353,17 @@ export const calculateTimerStatistics = (
     maxDuration,
     minDuration,
   );
-  const { filtered, outlierCount } = detectOutliers(sanityResult.filtered);
+  const iqrResult = detectOutliersIQR(sanityResult.filtered);
+  const zScoreResult = detectOutliersZScore(iqrResult.filtered);
+  const { filtered } = zScoreResult;
+  const totalExcluded =
+    sanityResult.excludedCount +
+    iqrResult.outlierCount +
+    zScoreResult.outlierCount;
   const sorted = [...filtered].sort((a, b) => a - b);
   const mean = calculateMean(filtered);
   const stdDev = calculateStdDev(filtered);
   const cv = mean > 0 ? (stdDev / mean) * 100 : 0;
-
-  const totalExcluded = sanityResult.excludedCount + outlierCount;
 
   return {
     id: timerId,
@@ -374,6 +378,7 @@ export const calculateTimerStatistics = (
     p99: calculatePercentile(sorted, 99),
     samples: filtered.length,
     outliers: totalExcluded,
+    trimmedCount: iqrResult.outlierCount,
     dataQuality: assessDataQuality(cv),
   };
 };
