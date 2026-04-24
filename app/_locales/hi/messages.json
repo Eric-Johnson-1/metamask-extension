@@ -114,12 +114,6 @@
   "accountIdenticon": {
     "message": "अकाउंट आइकॉन"
   },
-  "accountIdenticonDescription": {
-    "message": "तीन अलग-अलग शैली के अनोखे आइकॉन में से चुनें, जो आपको एकाउंट्स को एक नजर में पहचानने में मदद कर सकते हैं।"
-  },
-  "accountIsntConnectedToastText": {
-    "message": "$2 से $1 कनेक्टेड नहीं है"
-  },
   "accountName": {
     "message": "अकाउंट का नाम"
   },
@@ -1546,12 +1540,6 @@
   "confirmFieldFrequency": {
     "message": "आवृत्ति"
   },
-  "confirmFieldInitialAllowance": {
-    "message": "शुरुआती भत्ता"
-  },
-  "confirmFieldMaxAllowance": {
-    "message": "अधिकतम भत्ता"
-  },
   "confirmFieldNeverExpires": {
     "message": "कभी एक्सपायर नहीं होता"
   },
@@ -1571,20 +1559,14 @@
     "message": "मासिक"
   },
   "confirmFieldPeriodDurationSeconds": {
-    "message": "सेकंड",
-    "description": "Unit descriptor following the numeric value, e.g. '100 seconds'"
+    "message": "$1 सेकंड",
+    "description": "$1 is the number of seconds in the permission period (shown when the period is not a standard hour/day/week/etc.)"
   },
   "confirmFieldPeriodDurationWeekly": {
     "message": "साप्ताहिक"
   },
   "confirmFieldPeriodDurationYearly": {
     "message": "वार्षिक"
-  },
-  "confirmFieldStartDate": {
-    "message": "शुरु करने की तारीख"
-  },
-  "confirmFieldStreamRate": {
-    "message": "स्ट्रीम रेट"
   },
   "confirmFieldTooltipJustification": {
     "message": "वेबसाइट द्वारा दिए गए अनुरोध का औचित्य"
@@ -1750,9 +1732,6 @@
   },
   "connect": {
     "message": "कनेक्ट करें"
-  },
-  "connectAccount": {
-    "message": "खाता कनेक्ट करें"
   },
   "connectAccounts": {
     "message": "खातों को कनेक्ट करें"
@@ -2249,9 +2228,6 @@
   },
   "deepLink_thePerpsMarketDetailPage": {
     "message": "द पर्प्स मार्केट पेज"
-  },
-  "deepLink_thePerpsMarketListPage": {
-    "message": "द पर्प्स मार्केट लिस्ट पेज"
   },
   "deepLink_thePerpsPage": {
     "message": "पर्प्स पेज"
@@ -4034,12 +4010,6 @@
   "mismatchedRpcUrl": {
     "message": "हमारे रिकॉर्ड के अनुसार, सबमिट किया गया RPC-URL वैल्यू इस चेन ID के लिए किसी ज्ञात प्रोवाइडर से मेल नहीं खाता।"
   },
-  "missingSetting": {
-    "message": "सेटिंग नहीं मिल रही है?"
-  },
-  "missingSettingRequest": {
-    "message": "यहां रिक्वेस्ट करें"
-  },
   "month": {
     "message": "महीना"
   },
@@ -5811,7 +5781,8 @@
     "message": "मार्केट्स खोजें"
   },
   "perpsSeeAll": {
-    "message": "सभी को देखें"
+    "message": "सभी को देखें",
+    "description": "Accessible label for the arrow button that navigates to the full activity list"
   },
   "perpsServiceUnavailable": {
     "message": "सेवा अस्थायी रूप से अनुपलब्ध है। कृपया बाद में फिर से कोशिश करें।"

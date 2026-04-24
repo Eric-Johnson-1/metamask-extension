@@ -114,12 +114,6 @@
   "accountIdenticon": {
     "message": "Εικονίδιο λογαριασμού"
   },
-  "accountIdenticonDescription": {
-    "message": "Επιλέξτε ανάμεσα σε τρία διαφορετικά στυλ μοναδικών εικονιδίων που σας βοηθούν να αναγνωρίζετε τους λογαριασμούς σας με μια ματιά."
-  },
-  "accountIsntConnectedToastText": {
-    "message": "Το $1 δεν συνδέεται με το $2"
-  },
   "accountName": {
     "message": "Όνομα λογαριασμού"
   },
@@ -1546,12 +1540,6 @@
   "confirmFieldFrequency": {
     "message": "Συχνότητα"
   },
-  "confirmFieldInitialAllowance": {
-    "message": "Αρχικό όριο"
-  },
-  "confirmFieldMaxAllowance": {
-    "message": "Μέγιστο όριο"
-  },
   "confirmFieldNeverExpires": {
     "message": "Δεν λήγει ποτέ"
   },
@@ -1571,20 +1559,14 @@
     "message": "Μηνιαία"
   },
   "confirmFieldPeriodDurationSeconds": {
-    "message": "δευτερόλεπτα",
-    "description": "Unit descriptor following the numeric value, e.g. '100 seconds'"
+    "message": "$1 δευτερόλεπτα",
+    "description": "$1 is the number of seconds in the permission period (shown when the period is not a standard hour/day/week/etc.)"
   },
   "confirmFieldPeriodDurationWeekly": {
     "message": "Εβδομαδιαία"
   },
   "confirmFieldPeriodDurationYearly": {
     "message": "Ετήσια"
-  },
-  "confirmFieldStartDate": {
-    "message": "Ημερομηνία έναρξης"
-  },
-  "confirmFieldStreamRate": {
-    "message": "Ρυθμός ροής"
   },
   "confirmFieldTooltipJustification": {
     "message": "Αιτιολόγηση του αιτήματος που παρέχεται από τον ιστότοπο"
@@ -1750,9 +1732,6 @@
   },
   "connect": {
     "message": "Σύνδεση"
-  },
-  "connectAccount": {
-    "message": "Σύνδεση λογαριασμού"
   },
   "connectAccounts": {
     "message": "Σύνδεση λογαριασμών"
@@ -2249,9 +2228,6 @@
   },
   "deepLink_thePerpsMarketDetailPage": {
     "message": "της σελίδας αγοράς για perps"
-  },
-  "deepLink_thePerpsMarketListPage": {
-    "message": "τη λίστα αγοράς για perps"
   },
   "deepLink_thePerpsPage": {
     "message": "η σελίδα συμβολαίων perps"
@@ -4034,12 +4010,6 @@
   "mismatchedRpcUrl": {
     "message": "Σύμφωνα με τα αρχεία μας, η τιμή της διεύθυνσης URL του RPC που υποβλήθηκε δεν αντιστοιχεί με κάποιον γνωστό πάροχο για αυτό το αναγνωριστικό αλυσίδας."
   },
-  "missingSetting": {
-    "message": "Δεν βρίσκετε μια ρύθμιση;"
-  },
-  "missingSettingRequest": {
-    "message": "Υποβάλετε αίτημα εδώ"
-  },
   "month": {
     "message": "μήνας"
   },
@@ -5811,7 +5781,8 @@
     "message": "Αναζήτηση αγορών"
   },
   "perpsSeeAll": {
-    "message": "Προβολή όλων"
+    "message": "Προβολή όλων",
+    "description": "Accessible label for the arrow button that navigates to the full activity list"
   },
   "perpsServiceUnavailable": {
     "message": "Η υπηρεσία είναι προσωρινά μη διαθέσιμη. Προσπαθήστε ξανά αργότερα."

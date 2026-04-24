@@ -114,12 +114,6 @@
   "accountIdenticon": {
     "message": "Ícono de cuenta"
   },
-  "accountIdenticonDescription": {
-    "message": "Elige entre tres estilos diferentes de íconos únicos que pueden ayudarte a identificar cuentas rápidamente."
-  },
-  "accountIsntConnectedToastText": {
-    "message": "$1 no está conectado a $2"
-  },
   "accountName": {
     "message": "Nombre de la cuenta"
   },
@@ -1546,12 +1540,6 @@
   "confirmFieldFrequency": {
     "message": "Frecuencia"
   },
-  "confirmFieldInitialAllowance": {
-    "message": "Asignación inicial"
-  },
-  "confirmFieldMaxAllowance": {
-    "message": "Asignación máxima"
-  },
   "confirmFieldNeverExpires": {
     "message": "Nunca caduca"
   },
@@ -1571,20 +1559,14 @@
     "message": "Mensual"
   },
   "confirmFieldPeriodDurationSeconds": {
-    "message": "segundos",
-    "description": "Unit descriptor following the numeric value, e.g. '100 seconds'"
+    "message": "$1 segundos",
+    "description": "$1 is the number of seconds in the permission period (shown when the period is not a standard hour/day/week/etc.)"
   },
   "confirmFieldPeriodDurationWeekly": {
     "message": "Semanal"
   },
   "confirmFieldPeriodDurationYearly": {
     "message": "Anual"
-  },
-  "confirmFieldStartDate": {
-    "message": "Fecha de inicio"
-  },
-  "confirmFieldStreamRate": {
-    "message": "Tasa de flujo"
   },
   "confirmFieldTooltipJustification": {
     "message": "Justificación de la solicitud proporcionada por el sitio web"
@@ -1750,9 +1732,6 @@
   },
   "connect": {
     "message": "Conectar"
-  },
-  "connectAccount": {
-    "message": "Conectar cuenta"
   },
   "connectAccounts": {
     "message": "Conectar cuentas"
@@ -2249,9 +2228,6 @@
   },
   "deepLink_thePerpsMarketDetailPage": {
     "message": "la página del mercado de contratos perpetuos"
-  },
-  "deepLink_thePerpsMarketListPage": {
-    "message": "la página de la lista del mercado de contratos perpetuos"
   },
   "deepLink_thePerpsPage": {
     "message": "la página de contratos perpetuos"
@@ -4034,12 +4010,6 @@
   "mismatchedRpcUrl": {
     "message": "Según nuestros registros, el valor de la URL de RPC enviado no coincide con un proveedor conocido para este ID de cadena."
   },
-  "missingSetting": {
-    "message": "¿No puede encontrar un ajuste?"
-  },
-  "missingSettingRequest": {
-    "message": "Solicítelo aquí"
-  },
   "month": {
     "message": "mes"
   },
@@ -5811,7 +5781,8 @@
     "message": "Buscar mercados"
   },
   "perpsSeeAll": {
-    "message": "Ver todo"
+    "message": "Ver todo",
+    "description": "Accessible label for the arrow button that navigates to the full activity list"
   },
   "perpsServiceUnavailable": {
     "message": "El servicio no está disponible temporalmente. Vuelve a intentarlo más tarde."

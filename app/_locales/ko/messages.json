@@ -114,12 +114,6 @@
   "accountIdenticon": {
     "message": "계정 식별 아이콘"
   },
-  "accountIdenticonDescription": {
-    "message": "세 가지 고유한 아이콘 스타일 중 하나를 선택하면 계정을 한눈에 식별할 수 있습니다."
-  },
-  "accountIsntConnectedToastText": {
-    "message": "$1은(는) $2에 연결되지 않았습니다"
-  },
   "accountName": {
     "message": "계정 이름"
   },
@@ -1546,12 +1540,6 @@
   "confirmFieldFrequency": {
     "message": "빈도"
   },
-  "confirmFieldInitialAllowance": {
-    "message": "초기 허용량"
-  },
-  "confirmFieldMaxAllowance": {
-    "message": "최대 허용량"
-  },
   "confirmFieldNeverExpires": {
     "message": "만료 없음"
   },
@@ -1571,20 +1559,14 @@
     "message": "월간"
   },
   "confirmFieldPeriodDurationSeconds": {
-    "message": "초",
-    "description": "Unit descriptor following the numeric value, e.g. '100 seconds'"
+    "message": "$1초",
+    "description": "$1 is the number of seconds in the permission period (shown when the period is not a standard hour/day/week/etc.)"
   },
   "confirmFieldPeriodDurationWeekly": {
     "message": "주간"
   },
   "confirmFieldPeriodDurationYearly": {
     "message": "연간"
-  },
-  "confirmFieldStartDate": {
-    "message": "시작 날짜"
-  },
-  "confirmFieldStreamRate": {
-    "message": "스트림 속도"
   },
   "confirmFieldTooltipJustification": {
     "message": "해당 요청에 대한 근거는 웹사이트에서 제시됩니다"
@@ -1750,9 +1732,6 @@
   },
   "connect": {
     "message": "연결"
-  },
-  "connectAccount": {
-    "message": "계정 연결"
   },
   "connectAccounts": {
     "message": "계정 연결"
@@ -2249,9 +2228,6 @@
   },
   "deepLink_thePerpsMarketDetailPage": {
     "message": "무기한 선물 시장 페이지"
-  },
-  "deepLink_thePerpsMarketListPage": {
-    "message": "무기한 선물 시장 목록 페이지"
   },
   "deepLink_thePerpsPage": {
     "message": "무기한 선물 페이지"
@@ -4034,12 +4010,6 @@
   "mismatchedRpcUrl": {
     "message": "기록에 따르면 제출한 RPC URL 값이 이 체인 ID의 알려진 공급업체와 일치하지 않습니다."
   },
-  "missingSetting": {
-    "message": "설정을 찾으세요?"
-  },
-  "missingSettingRequest": {
-    "message": "여기에서 요청하세요"
-  },
   "month": {
     "message": "월"
   },
@@ -5811,7 +5781,8 @@
     "message": "시장 검색"
   },
   "perpsSeeAll": {
-    "message": "모두 보기"
+    "message": "모두 보기",
+    "description": "Accessible label for the arrow button that navigates to the full activity list"
   },
   "perpsServiceUnavailable": {
     "message": "서비스를 일시적으로 사용할 수 없습니다. 나중에 다시 시도해 주세요."
